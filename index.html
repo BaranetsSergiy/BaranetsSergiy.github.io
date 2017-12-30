@@ -103,14 +103,15 @@
 			outResult.style.color = oldColor;
 
 			if ( userNumber != generatedNumber && counter == 10 ) {
-				outResult.innerHTML = "К сожалению лимит попыток исчерпан. Вы не угадали";
+				outResult.innerHTML = "К сожалению лимит попыток исчерпан. Вы не угадали." +
+				                      "Число равно" + generatedNumber;
 				finish();
 			} else if  (userNumber > generatedNumber) {
 				outResult.innerHTML = "Ваше число " + userNumber + " больше чем нужно";
 			} else if (userNumber < generatedNumber) {
 				outResult.innerHTML = "Ваше число " + userNumber + " меньше чем нужно";
 			} else {
-				outResult.innerHTML = "<strong id = congratulation>  Поздравляю! Вы угадали!  </strong>";
+				outResult.innerHTML = "<strong id = congratulation>  Поздравляю! Вы угадали! </strong>";
 				finish();
 			}
 		}
